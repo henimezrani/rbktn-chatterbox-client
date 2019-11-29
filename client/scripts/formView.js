@@ -4,9 +4,13 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
+
   },
 
   handleSubmit: function(event) {
+    var text = $('input').val();
+    // $('#chats').prepend(text);
+    Parse.create(text, )
     // Stop the browser from submitting the form
     event.preventDefault();
     

@@ -1,3 +1,4 @@
+var datatest;
 var App = {
 
   $spinner: $('.spinner img'),
@@ -18,10 +19,10 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
-    Parse.readAll((data) => {
+    Parse.readAll((elem) => {
       // examine the response from the server request:
-      console.log(data);
-
+      
+      console.log(elem);
       callback();
     });
   },
