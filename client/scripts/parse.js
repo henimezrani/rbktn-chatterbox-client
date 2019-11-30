@@ -4,12 +4,14 @@ var Parse = {
 
   create: function(message, successCB, errorCB = null) {
     $.ajax({
-      url:Parse.server,
+      url: Parse.server,
       type: 'POST',
       data: JSON.stringify(message),
       contentType: 'application/json',
       success: successCB,
-      error: errorCB
+      error: errorCB || function(error){
+        console.log(error)
+      }
     })
   },
 

@@ -4,17 +4,18 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
-
   },
 
   handleSubmit: function(event) {
-    var text = $('input').val();
+    event.preventDefault()
+    var inputText = $('input').val();
+    var message = {
+      username: App.username,
+      text: inputText,
+      roomname: $('#rooms select').val()
+    }
     // $('#chats').prepend(text);
-    Parse.create(text, )
-    // Stop the browser from submitting the form
-    event.preventDefault();
-    
-    console.log('click!');
+    MessagesView.renderMessage(message);
   },
 
   setStatus: function(active) {
@@ -22,4 +23,6 @@ var FormView = {
     FormView.$form.find('input[type=submit]').attr('disabled', status);
   }
 
+  //handleAdd: function(event) {}
 };
+

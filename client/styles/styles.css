@@ -69,6 +69,20 @@ form input[type=text] {
     font-weight: 800;
 }
 
+.chat:hover .username,
+.chat:hover .username,
+.chat:hover .username {
+    cursor: pointer;
+    color:#b71c1c;
+}
+
+.chat .username:hover,
+.chat .username:active,
+.chat .username:focus {
+    cursor: pointer;
+    color:#b71c00;
+}
+
 .chat:hover {
     background-color: #ddd;
 }

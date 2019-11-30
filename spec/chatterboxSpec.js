@@ -92,10 +92,14 @@ describe('chatterbox', function() {
         text: 'I didn\'t get a harumph outa that guy.!',
         roomname: 'lobby'
       });
+ var tmp = $('#chats').find('.username')
+      console.log(tmp)
       $('#chats').find('.username').trigger('click');
+
       expect(Friends.toggleStatus.called).to.be.true;
 
       Friends.toggleStatus.restore();
+
     });
 
     it('should add a room when clicking add', function() {

@@ -21,7 +21,6 @@ var App = {
   fetch: function(callback = ()=>{}) {
     Parse.readAll((elem) => {
       // examine the response from the server request:
-      
       console.log(elem);
       callback();
     });
